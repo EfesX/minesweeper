@@ -1,5 +1,7 @@
 # MINESWEEPER
 
+[![build](https://github.com/EfesX/minesweeper/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/EfesX/minesweeper/actions/workflows/build.yml)
+
 There are 100 mines in your terminal. Neutralize them all.
 
 ![screen](/pics/screen.png)
