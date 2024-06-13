@@ -1,0 +1,25 @@
+name: build
+on:
+   push:
+      branches: [ "main" ]
+   pull_request:
+      branches: [ "main" ]
+
+
+jobs:
+    build:
+        strategy:
+            matrix:
+                os: [ubuntu-latest, macos-latest, windows-latest]
+        runs-on: ${{ matrix.os }}
+      
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+              with:
+                submodules: true
+
+            - name: build
+              run: |
+                cmake -S . -B build
+                cmake --build build
